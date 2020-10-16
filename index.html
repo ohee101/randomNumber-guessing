@@ -1,0 +1,55 @@
+# randomNumber-guessing
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing A Random number</title>
+</head>
+<body>
+
+    
+
+
+
+    <script >
+
+        let min = 1;
+        let max = 10;
+
+        
+
+        var RandomNumber = Math.floor(Math.random() * (max - min) + min)  ;
+
+       var counter = 0;
+       var MaxTries = 2;
+
+        while (Attempts != RandomNumber  ) {
+            var Attempts = prompt("Please pick a number between 1 and 10");
+            counter += 1;
+
+            if (counter > MaxTries) {
+                
+                document.write("You have no more tries left")
+                break
+            }
+
+            if (Attempts == RandomNumber) {
+                document.write("Congratulations You Have The Correct Answer");
+                document.write("<p> The Random Number Was " + RandomNumber + "</p>");
+                document.write("<p> It Took You " + counter + "Attempts To Get The Correct Number </p>");
+            }
+
+
+        }
+
+
+
+
+        //function getRandomArbitrary(min, max) {
+  //return Math.random() * (10 - 1) + 1;
+//}
+
+    </script>
+</body>
+</html>
